@@ -1,7 +1,7 @@
 /**
- * myvector.cpp
+ * simplemenu.cpp
  *
  * By Sebastian Raaphorst, 2018.
  */
 
-#include <QVector>
+#include "simplemenu.h"
