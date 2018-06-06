@@ -11,8 +11,8 @@ target_link_libraries(AnotherMenu LINK_PUBLIC Qt5::Widgets)
 add_executable(CheckableMenu CheckableMenu.cpp)
 target_link_libraries(CheckableMenu LINK_PUBLIC Qt5::Widgets)
 
-add_executable(Toolbar Toolbar.cpp)
-target_link_libraries(Toolbar LINK_PUBLIC Qt5::Widgets)
+add_executable(toolbar toolbar.cpp)
+target_link_libraries(toolbar LINK_PUBLIC Qt5::Widgets)
 
 add_executable(MySkeleton MySkeleton.cpp)
 target_link_libraries(MySkeleton LINK_PUBLIC Qt5::Widgets)

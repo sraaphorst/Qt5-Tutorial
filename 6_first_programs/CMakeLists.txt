@@ -8,5 +8,5 @@ target_link_libraries(cursors LINK_PUBLIC Qt5::Widgets)
 add_executable(pushbutton pushbutton.cpp)
 target_link_libraries(pushbutton LINK_PUBLIC Qt5::Widgets)
 
-add_executable(plus_minus PlusMinus.h PlusMinus.cpp)
+add_executable(plus_minus plusminus.h plusminus.cpp)
 target_link_libraries(plus_minus LINK_PUBLIC Qt5::Widgets)

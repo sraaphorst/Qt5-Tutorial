@@ -1,5 +1,5 @@
 /**
- * PlusMinus.h
+ * plusminus.h
  *
  * By Sebastian Raaphorst, 2018.
  */

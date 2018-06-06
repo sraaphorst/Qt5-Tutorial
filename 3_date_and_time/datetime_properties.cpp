@@ -16,7 +16,7 @@ int main() {
 
     QDate d { QDate::currentDate() };
     int wd = d.dayOfWeek();
-
+    
     auto fmts = QList { QDate::shortDayName, QDate::longDayName };
     std::for_each(fmts.begin(), fmts.end(),
                   [&out, wd](auto fmt) { out << "Today is " << fmt(wd, QDate::DateFormat) << '.' << endl; });

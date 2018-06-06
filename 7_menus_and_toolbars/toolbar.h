@@ -9,9 +9,9 @@
 #include <QApplication>
 #include <QMainWindow>
 
-class Toolbar : public QMainWindow {
+class ToolBar : public QMainWindow {
 public:
-    Toolbar(QWidget *parent = nullptr);
+    ToolBar(QWidget *parent = nullptr);
 };
 
 

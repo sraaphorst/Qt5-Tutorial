@@ -1,10 +1,10 @@
 /**
- * PlusMinus.cpp
+ * plusminus.cpp
  *
  * By Sebastian Raaphorst, 2018.
  */
 
-#include "PlusMinus.h"
+#include "plusminus.h"
 #include <QGridLayout>
 
 PlusMinus::PlusMinus(QWidget *parent)
