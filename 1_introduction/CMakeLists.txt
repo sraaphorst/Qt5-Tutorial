@@ -1,5 +1,7 @@
-add_executable(version version.cpp)
-target_link_libraries(version LINK_PUBLIC Qt5::Core)
+set(apps
+        version
+        simple)
 
-add_executable(simple simple.cpp)
-target_link_libraries(simple LINK_PUBLIC Qt5::Widgets)
+foreach(a ${apps})
+    app_coreonly(${a})
+endforeach()

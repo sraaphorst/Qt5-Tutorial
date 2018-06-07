@@ -1,12 +1,12 @@
+set(apps
+        simple_qt
+        cursors
+        pushbutton
+        plusminus
+        )
+
 configure_file(Alex.png Alex.png COPYONLY)
-add_executable(simple_qt simple_qt.cpp)
-target_link_libraries(simple_qt LINK_PUBLIC Qt5::Widgets)
 
-add_executable(cursors cursors.cpp)
-target_link_libraries(cursors LINK_PUBLIC Qt5::Widgets)
-
-add_executable(pushbutton pushbutton.cpp)
-target_link_libraries(pushbutton LINK_PUBLIC Qt5::Widgets)
-
-add_executable(plus_minus plusminus.h plusminus.cpp)
-target_link_libraries(plus_minus LINK_PUBLIC Qt5::Widgets)
+foreach(a ${apps})
+    app(${a})
+endforeach()
