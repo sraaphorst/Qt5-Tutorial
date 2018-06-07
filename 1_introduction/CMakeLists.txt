@@ -1,7 +1,2 @@
-set(apps
-        version
-        simple)
-
-foreach(a ${apps})
-    app_coreonly(${a})
-endforeach()
+app_coreonly(version)
+app(simple)

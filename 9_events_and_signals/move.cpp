@@ -4,7 +4,7 @@
  * By Sebastian Raaphorst, 2018.
  */
 
-#include "Move.h"
+#include "move.h"
 
 #include <QApplication>
 #include <QMoveEvent>

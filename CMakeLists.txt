@@ -16,7 +16,7 @@ set(CMAKE_AUTOMOC ON)
 find_package(Boost REQUIRED)
 include_directories(${Boost_INCLUDE_DIR})
 
-set (CMAKE_PREFIX_PATH "/Applications/Qt-5.9.4/5.9.4/clang_64/lib/cmake/Qt5" CACHE PATH "")
+set (CMAKE_PREFIX_PATH "/Applications/Qt-5.9.4/5.9.4/clang_64" CACHE PATH "")
 find_package(Qt5 COMPONENTS Core Widgets REQUIRED)
 
 function(app_coreonly name)
