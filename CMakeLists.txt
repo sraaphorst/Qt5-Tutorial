@@ -25,7 +25,7 @@ find_package(Qt5 COMPONENTS Core Widgets REQUIRED)
 
 function(app_coreonly name)
     add_executable(${name} ${name}.cpp)
-    target_link_libraries(${name} Qt5::Core)
+    target_link_libraries(${name} LINK_PUBLIC Qt5::Core)
 endfunction()
 
 function(app name)
