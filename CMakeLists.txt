@@ -16,12 +16,8 @@ set(CMAKE_AUTOMOC ON)
 find_package(Boost REQUIRED)
 include_directories(${Boost_INCLUDE_DIR})
 
-set (CMAKE_PREFIX_PATH "/Applications/Qt-5.9.4/5.9.4/clang_64/lib/cmake/Qt5")
+set (CMAKE_PREFIX_PATH "/Applications/Qt-5.9.4/5.9.4/clang_64/lib/cmake/Qt5" CACHE PATH "")
 find_package(Qt5 COMPONENTS Core Widgets REQUIRED)
-
-#set (CMAKE_PREFIX_PATH "/Applications/Qt/5.10.1/clang_64/lib/cmake/Qt5Widgets")
-#set(Qt5Widgets_DIR "/Applications/Qt/5.10.1/clang_64/lib/cmake/Qt5Widgets" CACHE PATH "")
-#find_package(Qt5Widgets REQUIRED)
 
 function(app_coreonly name)
     add_executable(${name} ${name}.cpp)
