@@ -10,7 +10,7 @@
 #include <QMenuBar>
 #include <QStatusBar>
 
-#include "CheckableMenu.h"
+#include "checkablemenu.h"
 
 CheckableMenu::CheckableMenu(QWidget *parent)
     : QMainWindow(parent) {

@@ -21,3 +21,6 @@ target_link_libraries(calculator Qt5::Widgets Qt5::Core)
 
 add_executable(review review.cpp)
 target_link_libraries(review Qt5::Widgets)
+
+add_executable(reviewform reviewform.cpp)
+target_link_libraries(reviewform Qt5::Widgets)

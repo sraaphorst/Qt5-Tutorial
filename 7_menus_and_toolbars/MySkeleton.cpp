@@ -13,7 +13,7 @@
 #include <QTextEdit>
 #include <QToolBar>
 
-#include "MySkeleton.h"
+#include "myskeleton.h"
 
 MySkeleton::MySkeleton(QWidget *parent)
     : QMainWindow(parent) {
