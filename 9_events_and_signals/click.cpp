@@ -12,10 +12,10 @@
 
 Click::Click(QWidget *parent)
     : QWidget(parent) {
-    auto *hbox = new QHBoxLayout(this);
+    auto hbox = new QHBoxLayout(this);
     hbox->setSpacing(5);
 
-    auto *quitButton = new QPushButton("Quit");
+    auto quitButton = new QPushButton("Quit");
     hbox->addWidget(quitButton, 0, Qt::AlignLeft | Qt::AlignTop);
 
     connect(quitButton, &QPushButton::clicked, qApp, &QApplication::quit);

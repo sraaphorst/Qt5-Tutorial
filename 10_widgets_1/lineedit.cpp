@@ -17,7 +17,7 @@ LineEdit::LineEdit(QWidget *parent)
     QStringList labels { "Name:", "Age:", "Occupation:" };
     auto grid = new QGridLayout(this);
 
-    for (int i=0; i < labels.size(); ++i) {
+    for (auto i=0; i < labels.size(); ++i) {
         auto label = new QLabel(labels[i]);
         label->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
         auto editor = new QLineEdit;

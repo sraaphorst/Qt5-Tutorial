@@ -14,11 +14,11 @@
 FormEx::FormEx(QWidget *parent)
     : QWidget(parent) {
 
-    auto *nameEdit = new QLineEdit;
-    auto *addrEdit = new QLineEdit;
-    auto *occpEdit = new QLineEdit;
+    auto nameEdit = new QLineEdit;
+    auto addrEdit = new QLineEdit;
+    auto occpEdit = new QLineEdit;
 
-    auto *formLayout = new QFormLayout;
+    auto formLayout = new QFormLayout;
     formLayout->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
     formLayout->addRow(tr("&Name:"), nameEdit);
     formLayout->addRow(tr("&Email:"), addrEdit);

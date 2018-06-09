@@ -15,7 +15,7 @@
 
 Calculator::Calculator(QWidget *parent)
     : QWidget(parent) {
-    auto *grid = new QGridLayout;
+    auto grid = new QGridLayout;
     grid->setSpacing(2);
 
     QVector<QVector<QString>> buttons {
@@ -27,7 +27,7 @@ Calculator::Calculator(QWidget *parent)
 
     for (int i=0; i < 4; ++i) {
         for (int j=0; j < 4; ++j) {
-            QPushButton *b = new QPushButton(buttons[i][j]);
+            auto b = new QPushButton(buttons[i][j]);
             b->setFixedSize(40, 40);
             grid->addWidget(b, i, j);
         }

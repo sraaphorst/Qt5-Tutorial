@@ -15,7 +15,7 @@ int main() {
     QTextStream out { stdout };
 
     QDate d { QDate::currentDate() };
-    int wd = d.dayOfWeek();
+    auto wd = d.dayOfWeek();
 
     QList<QString(*)(int,QDate::MonthNameType)> fmts { QDate::shortDayName, QDate::longDayName };
     std::for_each(fmts.begin(), fmts.end(),
@@ -23,7 +23,7 @@ int main() {
 
 
     // A foray into ridiculousness, just for fun, to demonstrate QDate::longMonthName.
-    const int year = 2001;
+    constexpr auto year = 2001;
     out << "Year " << year << " had " << QDate(year, 1, 1).daysInYear() << " days:" << endl;
 
     QVector<QString> monthNames(12);

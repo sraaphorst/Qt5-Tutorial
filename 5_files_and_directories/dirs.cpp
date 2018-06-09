@@ -39,7 +39,7 @@ int main() {
     QVector< int > lengths;
     lengths.resize(ref.size());
     std::transform(ref.begin(), ref.cend(), lengths.begin(), [](auto f) { return f.size(); });
-    const int maxLength = *std::max_element(lengths.cbegin(), lengths.cend());
+    const auto maxLength = *std::max_element(lengths.cbegin(), lengths.cend());
 
     for (auto k: paths.keys())
         out << k.rightJustified(maxLength, ' ') << ": " << paths[k]() << endl;

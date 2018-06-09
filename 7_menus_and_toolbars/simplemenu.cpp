@@ -26,16 +26,15 @@ SimpleMenu::SimpleMenu(QWidget *parent)
         : QMainWindow(parent) {
 
     /** NOTE: Qt5 for OS X suppresses the quit action, and even from the file menu! **/
-    QAction *quit = new QAction("&Quitters!", this);
+    auto quit = new QAction("&Quitters!", this);
 
-    QMenu *file;
-    file = menuBar()->addMenu("&File");
+    auto file = menuBar()->addMenu("&File");
     file->addAction(quit);
     connect(quit, &QAction::triggered, qApp, QApplication::quit);
     file->addAction(new QAction("Squatting", this));
 
-    QAction *copy = new QAction("&Copy", this);
-    QMenu *edit = menuBar()->addMenu("&Edit");
+    auto copy = new QAction("&Copy", this);
+    auto edit = menuBar()->addMenu("&Edit");
     edit->addAction(copy);
     connect(copy, &QAction::triggered, this, &SimpleMenu::testme);
 }

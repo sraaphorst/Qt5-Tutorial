@@ -18,8 +18,8 @@ QString containerString(const C& c) {
     QString s;
     QTextStream ostr(&s);
     ostr << '[';
-    int i=1;
-    for (auto e: c) {
+    auto i=1;
+    for (const auto &e: c) {
         ostr << e;
         if (i < c.size())
             ostr << ", ";
@@ -49,10 +49,10 @@ int main() {
 
 
     /***** QLIST *****/
-    QList<QString> authors{"Balzac", "Tolstoy", "Gulbranssen", "London"};
+    QList<QString> authors {"Balzac", "Tolstoy", "Gulbranssen", "London"};
     out << "The list is " << containerString(authors) << endl;
     authors << "Galsworthy" << "Sienkiewicz";
-    QList<QString> moreAuthors{"Martin", "Tolkein", "Eddings"};
+    QList<QString> moreAuthors {"Martin", "Tolkein", "Eddings"};
     authors << moreAuthors;
     out << "The list is " << containerString(authors) << endl;
     std::sort(authors.begin(), authors.end());
@@ -60,8 +60,8 @@ int main() {
     out << endl;
 
     /***** QSTRINGLIST *****/
-    QString string = "coin, book, 2 girls, 1 cup, clock, bookmark";
-    QStringList items {string.split(",")};
+    QString string {"coin, book, 2 girls, 1 cup, clock, bookmark"};
+    QStringList items{string.split(",")};
     QStringListIterator it(items);
     while (it.hasNext())
         out << it.next().trimmed() << endl;
@@ -76,7 +76,7 @@ int main() {
     out << "cols1 now has size " << cols1.size() << ": " << containerString(cols1) << endl;
     cols1.unite(cols2);
     out << "cols1 has size " << cols1.size() << ": " << containerString(cols1) << endl;
-    QList<QString> lcols = cols1.toList();
+    auto lcols = cols1.toList();
     std::sort(lcols.begin(), lcols.end());
     out << "Sorted: " << containerString(lcols) << endl;
     out << endl;
@@ -89,7 +89,7 @@ int main() {
     out << "Keys: " << containerString(inventory.keys());
     out << "Values: " << containerString(inventory.values());
 
-    QMapIterator<QString, int> iter(inventory);
+    QMapIterator<QString, int> iter{inventory};
     while (iter.hasNext()) {
         iter.next();
         out << iter.key() << ": " << iter.value() << endl;

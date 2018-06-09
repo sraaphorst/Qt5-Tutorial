@@ -25,7 +25,7 @@ int main(int argc, char *argv[]) {
     }
 
     QFileInfo fileInfo(filename);
-    qint64 size = fileInfo.size();
+    auto size = fileInfo.size();
     out << "The size is: " << size << " bytes according to QFileInfo." << endl;
     out << "The size if: " << f.size() << " bytes according to QFile." << endl;
 
@@ -35,9 +35,9 @@ int main(int argc, char *argv[]) {
 
     // Create an input stream.
     QTextStream in(&f);
-    int i = 0;
+    auto i = 0;
     while (!in.atEnd()) {
-        QString line = in.readLine();
+        auto line = in.readLine();
         out << i << ": " << line << endl;
         ++i;
     }

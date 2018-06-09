@@ -24,12 +24,12 @@ AnotherMenu::AnotherMenu(QWidget *parent)
     QPixmap openIcon("resources/open.png");
     QPixmap quitIcon("resources/quit.png");
 
-    QAction *newA  = new QAction(newIcon,  "&New",  this);
-    QAction *openA = new QAction(openIcon, "&Open", this);
-    QAction *quitA = new QAction(quitIcon, "&Quit", this);
+    auto newA  = new QAction(newIcon,  "&New",  this);
+    auto openA = new QAction(openIcon, "&Open", this);
+    auto quitA = new QAction(quitIcon, "&Quit", this);
     quitA->setShortcut(tr("CTRL+Q"));
 
-    QMenu *file = menuBar()->addMenu("&File");
+    auto file = menuBar()->addMenu("&File");
     file->addAction(newA);
     file->addAction(openA);
     file->addSeparator();

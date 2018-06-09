@@ -18,7 +18,7 @@ CheckableMenu::CheckableMenu(QWidget *parent)
     viewst->setCheckable(true);
     viewst->setChecked(true);
 
-    QMenu *file = menuBar()->addMenu("&File");
+    auto file = menuBar()->addMenu("&File");
     file->addAction(viewst);
 
     statusBar();

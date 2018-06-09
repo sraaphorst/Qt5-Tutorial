@@ -12,12 +12,12 @@ int main() {
     QTextStream out { stdout };
 
     QDate dt { 2015, 5, 11 };
-    QDate nd1 = dt.addDays(-10);
-    QDate nd2 = dt.addDays(10);
+    auto nd1 = dt.addDays(-10);
+    auto nd2 = dt.addDays(10);
     out << nd1.toString() << " < " << dt.toString() << " < " << nd2.toString() << endl;
 
     QDate cur { QDate::currentDate() };
-    int year = (cur.month() > 9 || (cur.month() == 9 && cur.day() > 28)) ? cur.year() + 1 : cur.year();
+    auto year = (cur.month() > 9 || (cur.month() == 9 && cur.day() > 28)) ? cur.year() + 1 : cur.year();
     QDate nextBday { year, 9, 28 };
     out << "There are " << cur.daysTo(nextBday) << " days until my birthday." << endl;
 

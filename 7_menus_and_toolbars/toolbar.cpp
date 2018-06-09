@@ -17,11 +17,11 @@ ToolBar::ToolBar(QWidget *parent)
     QPixmap openIcon("resources/open.png");
     QPixmap quitIcon("resources/quit.png");
 
-    QToolBar *Toolbar = addToolBar("main Toolbar");
+    auto Toolbar = addToolBar("main Toolbar");
     Toolbar->addAction(QIcon(newIcon), "New File");
     Toolbar->addAction(QIcon(openIcon), "Open File");
     Toolbar->addSeparator();
-    QAction *quit = Toolbar->addAction(QIcon(quitIcon), "Quit Application");
+    auto quit = Toolbar->addAction(QIcon(quitIcon), "Quit Application");
 
     connect(quit, &QAction::triggered, qApp, &QApplication::quit);
 }

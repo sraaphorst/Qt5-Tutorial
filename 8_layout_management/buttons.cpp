@@ -12,7 +12,7 @@
 Buttons::Buttons(QWidget *parent)
     : QWidget(parent) {
     QVBoxLayout *vbox = new QVBoxLayout(this);
-    QHBoxLayout *hbox = new QHBoxLayout();
+    QHBoxLayout *hbox = new QHBoxLayout;
 
     // addWidget automatically sets the parent, so we don't have to.
     okButton = new QPushButton("OK");

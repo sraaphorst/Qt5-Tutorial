@@ -9,11 +9,11 @@
 
 PlusMinus::PlusMinus(QWidget *parent)
     : QWidget(parent) {
-    QPushButton *plsButton = new QPushButton("+", this);
-    QPushButton *minButton = new QPushButton("-", this);
+    auto plsButton = new QPushButton("+", this);
+    auto minButton = new QPushButton("-", this);
     lbl = new QLabel("0", this);
 
-    QGridLayout *grid = new QGridLayout(this);
+    auto grid = new QGridLayout(this);
     grid->addWidget(plsButton, 0, 0);
     grid->addWidget(minButton, 0, 1);
     grid->addWidget(lbl, 1, 1);
@@ -25,13 +25,13 @@ PlusMinus::PlusMinus(QWidget *parent)
 }
 
 void PlusMinus::OnPlus() {
-    int val = lbl->text().toInt();
+    auto val = lbl->text().toInt();
     ++val;
     lbl->setText(QString::number(val));
 }
 
 void PlusMinus::OnMinus() {
-    int val = lbl->text().toInt();
+    auto val = lbl->text().toInt();
     --val;
     lbl->setText(QString::number(val));
 }

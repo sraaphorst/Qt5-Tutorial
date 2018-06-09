@@ -20,12 +20,12 @@ StatusBar::StatusBar(QWidget *parent)
     auto frame = new QFrame(this);
     setCentralWidget(frame);
 
-    auto *hbox = new QHBoxLayout(frame);
+    auto hbox = new QHBoxLayout(frame);
 
-    auto *okButton = new QPushButton("OK");
+    auto okButton = new QPushButton("OK");
     hbox->addWidget(okButton, 0, Qt::AlignLeft | Qt::AlignTop);
 
-    auto *applyButton = new QPushButton("Apply");
+    auto applyButton = new QPushButton("Apply");
     hbox->addWidget(applyButton, 1, Qt::AlignLeft | Qt::AlignTop);
 
     // Makes the status bar. Returns it, but we can always get it again via this function.

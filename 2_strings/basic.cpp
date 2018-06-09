@@ -9,7 +9,7 @@
 int main() {
     QTextStream out(stdout);
 
-    QString a = "love";
+    QString a { "love" };
     a.append(" Qt5");
     a.prepend("I ");
 

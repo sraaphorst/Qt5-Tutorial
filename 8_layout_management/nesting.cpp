@@ -26,10 +26,10 @@ Nesting::Nesting(QWidget *parent)
     };
     std::sort(movies.begin(), movies.end());
 
-    QListWidget *lw = new QListWidget();
+    auto lw = new QListWidget;
     std::for_each(movies.begin(), movies.end(), [lw](const auto s) { lw->addItem(s); });
 
-    QBoxLayout *vbox = new QVBoxLayout();
+    auto vbox = new QVBoxLayout;
     vbox->setSpacing(3);
     vbox->addStretch(1);
 
@@ -42,14 +42,14 @@ Nesting::Nesting(QWidget *parent)
     QVector<QPushButton*> buttons;
     buttons.reserve(labels.size());
     std::transform(labels.cbegin(), labels.cend(), buttons.begin(), [vbox](const auto s) {
-       QPushButton *b = new QPushButton(s);
+       auto b = new QPushButton(s);
        vbox->addWidget(b);
        return b;
     });
 
     vbox->addStretch(1);
 
-    QBoxLayout *hbox = new QHBoxLayout();
+    auto hbox = new QHBoxLayout;
     hbox->addWidget(lw);
     hbox->addSpacing(15);
     hbox->addLayout(vbox);

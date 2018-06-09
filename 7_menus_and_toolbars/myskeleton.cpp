@@ -21,19 +21,19 @@ MySkeleton::MySkeleton(QWidget *parent)
     QIcon openIcon{QPixmap{"resources/open.png"}};
     QIcon quitIcon{QPixmap{"resources/quit.png"}};
 
-    QMenu *file = menuBar()->addMenu("&File");
+    auto file = menuBar()->addMenu("&File");
 
-    QAction *quit = new QAction(quitIcon, "&Quit", this);
+    auto quit = new QAction(quitIcon, "&Quit", this);
     file->addAction(quit);
     connect(quit, &QAction::triggered, qApp, &QApplication::quit);
 
-    QToolBar *toolbar = addToolBar("main toolbar");
+    auto toolbar = addToolBar("main toolbar");
     toolbar->addAction(newIcon, "New File");
     toolbar->addAction(openIcon, "Open File");
     toolbar->addSeparator();
     toolbar->addAction(quit);
 
-    QTextEdit *edit = new QTextEdit(this);
+    auto edit = new QTextEdit(this);
     setCentralWidget(edit);
 
     statusBar()->showMessage("Ready");

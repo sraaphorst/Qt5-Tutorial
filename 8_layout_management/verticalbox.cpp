@@ -14,7 +14,7 @@
 VerticalBox::VerticalBox(QWidget *parent)
     : QWidget(parent) {
 
-    QVBoxLayout *vbox = new QVBoxLayout(this);
+    auto vbox = new QVBoxLayout(this);
     vbox->setSpacing(1);
 
     QVector<QString> labels {
@@ -28,7 +28,7 @@ VerticalBox::VerticalBox(QWidget *parent)
     QVector<QPushButton*> buttons;
     buttons.reserve(labels.size());
     std::transform(labels.cbegin(), labels.cend(), buttons.begin(), [this, &vbox](const auto str){
-       QPushButton *b = new QPushButton(str, this);
+       auto b = new QPushButton(str, this);
        b->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
        vbox->addWidget(b);
        return b;

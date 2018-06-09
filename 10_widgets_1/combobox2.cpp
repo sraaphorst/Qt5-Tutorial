@@ -31,7 +31,7 @@ ComboBoxEx2::ComboBoxEx2(QWidget *parent)
 }
 
 void ComboBoxEx2::setLabel(int idx) {
-    int val = combo->itemData(idx).toInt();
+    auto val = combo->itemData(idx).toInt();
     label->setText("Picked: " + QString::number(val));
 }
 
