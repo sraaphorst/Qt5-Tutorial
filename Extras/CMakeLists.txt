@@ -1,7 +1,10 @@
 # Extras: me playing around with Qt5 as I go.
+set(apps
+        logging
+        string_funcs
+        Styles
+        )
 
-add_executable(logging logging.cpp)
-target_link_libraries(logging LINK_PUBLIC Qt5::Core)
-
-add_executable(string_funcs string_funcs.cpp)
-target_link_libraries(string_funcs LINK_PUBLIC Qt5::Core)
+foreach(a ${apps})
+    app(${a})
+endforeach()
