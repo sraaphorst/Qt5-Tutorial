@@ -5,14 +5,14 @@
  */
 
 #include <QApplication>
-#include "burning.h"
+#include "burning_widget.h"
 
 int main(int argc, char *argv[]) {
     QApplication app { argc, argv };
 
-    Burning window;
+    BurningWidget window;
     window.resize(370, 200);
-    window.setWindowTitle("The Burning Widget");
+    window.setWindowTitle("The BurningWidget");
     window.setVisible(true);
 
     return app.exec();

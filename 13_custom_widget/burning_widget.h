@@ -9,25 +9,23 @@
 #include <QWidget>
 #include <QSlider>
 #include <QFrame>
-#include "widget.h"
+#include "burning_scale.h"
 
-class Burning : public QFrame {
+class BurningWidget : public QFrame {
 
     Q_OBJECT
 
 public:
-    Burning(QWidget *parent = nullptr);
+    explicit BurningWidget(QWidget *parent = nullptr);
     int getCurrentWidth();
 
 public slots:
     void valueChanged(int);
 
 private:
-    QSlider *slider;
-    Widget *widget;
-
     // Used to determine the slider value.
     int cur_width;
+    BurningScale *widget;
 
     void initUI();
 };

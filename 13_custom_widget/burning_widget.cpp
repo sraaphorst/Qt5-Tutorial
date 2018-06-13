@@ -8,40 +8,40 @@
 #include <QSlider>
 #include <QVBoxLayout>
 
-#include "burning.h"
+#include "burning_widget.h"
 
-Burning::Burning(QWidget *parent)
+BurningWidget::BurningWidget(QWidget *parent)
     : QFrame(parent) {
 
     initUI();
 }
 
-void Burning::initUI() {
+void BurningWidget::initUI() {
 
     constexpr int MAX_VALUE = 750;
     cur_width = 0;
 
-    slider = new QSlider(Qt::Horizontal, this);
+    auto slider = new QSlider{Qt::Horizontal, this};
     slider->setMaximum(MAX_VALUE);
     slider->setGeometry(50, 50, 130, 30);
-    connect(slider, &QSlider::valueChanged, this, &Burning::valueChanged);
+    connect(slider, &QSlider::valueChanged, this, &BurningWidget::valueChanged);
 
     auto *hbox = new QHBoxLayout;
-    widget = new Widget(this);  // TODO: do we need this here? I think so.
+    widget = new BurningScale{this};
     hbox->addWidget(widget, 0); // 0 stretch
 
-    auto *vbox = new QVBoxLayout(this);
+    auto *vbox = new QVBoxLayout{this};
     vbox->addStretch(1);
     vbox->addLayout(hbox);
 
     setLayout(vbox);
 }
 
-void Burning::valueChanged(int val) {
+void BurningWidget::valueChanged(int val) {
     cur_width = val;
     widget->repaint();
 }
 
-int Burning::getCurrentWidth() {
+int BurningWidget::getCurrentWidth() {
     return cur_width;
 };
