@@ -1,0 +1,3 @@
+Here are some notes on how to avoid flickering in Qt repaints:
+
+https://doc.qt.io/archives/qq/qq06-flicker-free.html
