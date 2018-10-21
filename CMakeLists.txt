@@ -1,6 +1,6 @@
 # From: http://zetcode.com/gui/qt5
 
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.7)
 project(qt_tutorial VERSION 0.1.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
