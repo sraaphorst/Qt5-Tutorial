@@ -4,4 +4,4 @@
  
 http://zetcode.com/gui/qt5
 
-Status: <b>Complete</b>
+* Status: <b>Complete</b>
